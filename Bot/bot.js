@@ -48,7 +48,7 @@ const messages = {
     details: "Provide additional details about the item:",
     summary: "Thank you! Here is the summary of your details:\n\n",
     redirect: "Redirecting you to the e-commerce website...",
-    finalNote: "Please send us the items as soon as possible. Thank you!",
+    finalNote: "✅ Your information has been saved successfully!",
     success: "✅ Your information has been saved successfully!",
   },
   // Add translations for am and om as needed...

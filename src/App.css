@@ -11,6 +11,7 @@ body{
 /* Navbar styles */
 .navbar {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
@@ -37,7 +38,7 @@ body{
 
 .search-input {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   padding: 8px 12px;
   border-radius: 20px;
   border: 1px solid #ccc;
@@ -56,23 +57,29 @@ body{
 }
 .navbar__notification{
   margin-right:0px;
+  display: none;
+  
 }
 /* Responsive design */
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
     padding: 10px;
+    display: inline-block;
   }
 
   .navbar__brand,
   .navbar__cart {
-    flex: 0 0 100%;
+   display: none;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
   }
 
   .navbar__search {
-    flex: 0 0 100%;
+    flex: 1 1 1;
+  }
+  .navbar__notification{
+  display:hidden;
   }
 
   .search-input {
