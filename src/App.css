@@ -1,12 +1,83 @@
 body{
-  background-color: rgb(19, 19, 52);
-  color: #fff;
+  background-color: #fff;
+  color: black;
 }
 
 .cards__container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: white;
+}
+
+.navbar__brand {
+  flex: 1;
+}
+
+.brand-logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.navbar__search {
+  flex: 1;
+  text-align: center;
+  padding-left: 500px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.navbar__cart {
+  flex: 1;
+  text-align: right;
+}
+
+.cart-logo {
+  height: 50px;
+  cursor: pointer;
+  margin-right: 100px;
+}
+.navbar__notification{
+  margin-right:0px;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .navbar__brand,
+  .navbar__cart {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar__search {
+    flex: 0 0 100%;
+  }
+
+  .search-input {
+    width: 80%;
+  }
 }
 
 .heading{

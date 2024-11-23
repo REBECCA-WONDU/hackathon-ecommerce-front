@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Card from "./Components/Card/Card";
 import Cart from "./Components/Cart/Cart";
+import logo from "./images/logo.png";
+import cartLogo from "./images/cartLogo.png";
+import notification from "./images/notification.png";
 const { getData } = require("./db/db");
 const foods = getData();
 
@@ -47,8 +50,26 @@ function App() {
 
   return (
     <>
-      <h1 className="heading">Order Food</h1>
-      <Cart cartItems={cartItems} onCheckout={onCheckout}/>
+      <nav className="navbar">
+        <div className="navbar__brand">
+          <img src={logo} alt="Brand Logo" className="brand-logo" />
+        </div>
+        <div className="navbar__search">
+          <input
+            type="text"
+            placeholder="Search products..."
+            className="search-input"
+          />
+        </div>
+        <div className="navbar__notification">
+          <img src={notification} alt="Cart" className="cart-logo" />
+        </div>
+        <div className="navbar__cart">
+          <img src={cartLogo} alt="Cart" className="cart-logo" />
+        </div>
+      </nav>
+      <h1 className="heading">Featured Products</h1>
+      <Cart cartItems={cartItems} onCheckout={onCheckout} />
       <div className="cards__container">
         {foods.map((food) => {
           return (
